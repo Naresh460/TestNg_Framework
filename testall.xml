@@ -16,6 +16,7 @@
 			<class name="com.testcases.Indexpagetest" />
 			<class name="com.testcases.OrderPageTest" />
 			<class name="com.testcases.LoginPageTest" />
+             <class name="com.testcases.LoginPageTest" />
 
 		</classes>
 	</test> <!-- Test -->
