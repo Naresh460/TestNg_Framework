@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" thread-count="2">
+	
+	<listeners>
+		<listener class-name="com.utility.ITestListnerclass"></listener>
+	</listeners>
+	<test name="Test">
+<parameter name="browserrname" value="Chrome"></parameter>
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.testcases.Indexpagetest"></class>
+			<class name="com.testcases.HomePageTest" />
+			<class name="com.testcases.AddtoCarttest" />
+			<class name="com.testcases.SearchResultsTest" />
+			<class name="com.testcases.EndtoEndTest" />
+			<class name="com.testcases.OrderPageTest" />
+			<class name="com.testcases.LoginPageTest" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<!-- We have total 6 test in the Smoke Group-->
