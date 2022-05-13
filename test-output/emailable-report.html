@@ -9,15 +9,23 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">109,024</td><td>Smoke</td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">172,589</td><td>Smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testcases.HomePageTest</td><td><a href="#m0">verifyOrderHistory</a></td><td rowspan="1">1651585514601</td><td rowspan="1">16842</td></tr><tr class="passedeven"><td><a href="#m1">verifyWhishList</a></td><td rowspan="1">1651585514395</td><td rowspan="1">16973</td></tr><tr class="passedodd"><td rowspan="2">com.testcases.Indexpagetest</td><td><a href="#m2">verifyTitle</a></td><td rowspan="1">1651585484616</td><td rowspan="1">246</td></tr><tr class="passedodd"><td><a href="#m3">verifylogo</a></td><td rowspan="1">1651585485102</td><td rowspan="1">251</td></tr><tr class="passedeven"><td rowspan="1">com.testcases.LoginPageTest</td><td><a href="#m4">login</a></td><td rowspan="1">1651585556215</td><td rowspan="1">16750</td></tr><tr class="passedodd"><td rowspan="1">com.testcases.SearchResultsTest</td><td><a href="#m5">verifySearchProduct</a></td><td rowspan="1">1651585554778</td><td rowspan="1">7942</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.testcases.LoginPageTest</td><td><a href="#m0">login</a></td><td rowspan="1">1652439133781</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testcases.HomePageTest</td><td><a href="#m1">verifyOrderHistory</a></td><td rowspan="1">1652439091186</td><td rowspan="1">38066</td></tr><tr class="passedeven"><td><a href="#m2">verifyWhishList</a></td><td rowspan="1">1652439090527</td><td rowspan="1">38642</td></tr><tr class="passedodd"><td rowspan="2">com.testcases.Indexpagetest</td><td><a href="#m3">verifyTitle</a></td><td rowspan="1">1652439051823</td><td rowspan="1">1855</td></tr><tr class="passedodd"><td><a href="#m4">verifylogo</a></td><td rowspan="1">1652439051784</td><td rowspan="1">3240</td></tr><tr class="passedeven"><td rowspan="1">com.testcases.SearchResultsTest</td><td><a href="#m5">verifySearchProduct</a></td><td rowspan="1">1652439154655</td><td rowspan="1">10129</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.testcases.HomePageTest#verifyOrderHistory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testcases.HomePageTest#verifyWhishList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.testcases.Indexpagetest#verifyTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.testcases.Indexpagetest#verifylogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.testcases.LoginPageTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@xyz.com</td><td>admin@123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.testcases.LoginPageTest#login</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetIndex(String)&quot; because &quot;this.workbook&quot; is null
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetIndex(String)&quot; because &quot;this.workbook&quot; is null
+	at com.utility.ExcelLibrary.getRowCount(ExcelLibrary.java:58)
+	at com.dataProvider.DataProviders.getCredentials(DataProviders.java:26)
+	... 12 more
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.testcases.HomePageTest#verifyOrderHistory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.testcases.HomePageTest#verifyWhishList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.testcases.Indexpagetest#verifyTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.testcases.Indexpagetest#verifylogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">com.testcases.SearchResultsTest#verifySearchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

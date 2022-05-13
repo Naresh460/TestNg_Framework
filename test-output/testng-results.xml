@@ -1,227 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="15" total="21" passed="6" failed="0" skipped="0">
+<testng-results ignored="15" total="21" passed="5" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-03T19:14:24 IST" name="Suite" finished-at="2022-05-03T19:16:13 IST" duration-ms="109024">
+  <suite started-at="2022-05-13T16:19:54 IST" name="Suite" finished-at="2022-05-13T16:22:47 IST" duration-ms="172589">
     <groups>
       <group name="Sanity">
-        <method signature="LoginPageTest.login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@533bda92]" name="login" class="com.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@3e0e1046]" name="login" class="com.testcases.LoginPageTest"/>
       </group> <!-- Sanity -->
       <group name="Smoke">
-        <method signature="HomePageTest.verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" name="verifyOrderHistory" class="com.testcases.HomePageTest"/>
-        <method signature="HomePageTest.verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" name="verifyWhishList" class="com.testcases.HomePageTest"/>
-        <method signature="Indexpagetest.verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" name="verifyTitle" class="com.testcases.Indexpagetest"/>
-        <method signature="Indexpagetest.verifylogo()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" name="verifylogo" class="com.testcases.Indexpagetest"/>
-        <method signature="LoginPageTest.login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@533bda92]" name="login" class="com.testcases.LoginPageTest"/>
-        <method signature="SearchResultsTest.verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@548a24a]" name="verifySearchProduct" class="com.testcases.SearchResultsTest"/>
+        <method signature="HomePageTest.verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" name="verifyOrderHistory" class="com.testcases.HomePageTest"/>
+        <method signature="HomePageTest.verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" name="verifyWhishList" class="com.testcases.HomePageTest"/>
+        <method signature="Indexpagetest.verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" name="verifyTitle" class="com.testcases.Indexpagetest"/>
+        <method signature="Indexpagetest.verifylogo()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" name="verifylogo" class="com.testcases.Indexpagetest"/>
+        <method signature="LoginPageTest.login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@3e0e1046]" name="login" class="com.testcases.LoginPageTest"/>
+        <method signature="SearchResultsTest.verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@38145825]" name="verifySearchProduct" class="com.testcases.SearchResultsTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2022-05-03T19:14:24 IST" name="Test" finished-at="2022-05-03T19:16:13 IST" duration-ms="109024">
+    <test started-at="2022-05-13T16:19:54 IST" name="Test" finished-at="2022-05-13T16:22:47 IST" duration-ms="172589">
       <class name="com.testcases.LoginPageTest">
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.LoginPageTest@533bda92]" started-at="2022-05-03T19:15:34 IST" name="browsersetup" finished-at="2022-05-03T19:15:56 IST" duration-ms="22137" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@533bda92] output={null}]]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browsersetup -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@533bda92]" started-at="2022-05-03T19:15:56 IST" name="login" data-provider="credentials" finished-at="2022-05-03T19:16:12 IST" duration-ms="16750" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin@xyz.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LoginPageTest@3e0e1046]" started-at="2022-05-13T16:22:13 IST" name="login" data-provider="credentials" finished-at="2022-05-13T16:22:13 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetIndex(String)" because "this.workbook" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetIndex(String)" because "this.workbook" is null
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheetIndex(String)" because "this.workbook" is null
+at com.utility.ExcelLibrary.getRowCount(ExcelLibrary.java:58)
+at com.dataProvider.DataProviders.getCredentials(DataProviders.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+... 12 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.LoginPageTest@533bda92]" started-at="2022-05-03T19:16:13 IST" name="tearDown" finished-at="2022-05-03T19:16:13 IST" duration-ms="611" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
       </class> <!-- com.testcases.LoginPageTest -->
       <class name="com.testcases.HomePageTest">
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:14:47 IST" name="browsersetup" finished-at="2022-05-03T19:15:14 IST" duration-ms="27286" status="PASS">
+        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:20:58 IST" name="browsersetup" finished-at="2022-05-13T16:21:31 IST" duration-ms="32618" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=HomePageTest.verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=HomePageTest.verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@12591ac8] output={null}]]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browsersetup -->
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:14:47 IST" name="browsersetup" finished-at="2022-05-03T19:15:14 IST" duration-ms="26934" status="PASS">
+        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:20:59 IST" name="browsersetup" finished-at="2022-05-13T16:21:30 IST" duration-ms="31290" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=HomePageTest.verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=HomePageTest.verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@12591ac8] output={null}]]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browsersetup -->
-        <test-method signature="verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:15:14 IST" name="verifyWhishList" finished-at="2022-05-03T19:15:31 IST" duration-ms="16973" status="PASS">
+        <test-method signature="verifyWhishList()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:21:30 IST" name="verifyWhishList" finished-at="2022-05-13T16:22:09 IST" duration-ms="38642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWhishList -->
-        <test-method signature="verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:15:14 IST" name="verifyOrderHistory" finished-at="2022-05-03T19:15:31 IST" duration-ms="16842" status="PASS">
+        <test-method signature="verifyOrderHistory()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:21:31 IST" name="verifyOrderHistory" finished-at="2022-05-13T16:22:09 IST" duration-ms="38066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOrderHistory -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:15:31 IST" name="tearDown" finished-at="2022-05-03T19:15:32 IST" duration-ms="642" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:22:09 IST" name="tearDown" finished-at="2022-05-13T16:22:12 IST" duration-ms="2698" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.HomePageTest@6f10d5b6]" started-at="2022-05-03T19:15:31 IST" name="tearDown" finished-at="2022-05-03T19:15:32 IST" duration-ms="670" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.HomePageTest@12591ac8]" started-at="2022-05-13T16:22:09 IST" name="tearDown" finished-at="2022-05-13T16:22:12 IST" duration-ms="2551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testcases.HomePageTest -->
       <class name="com.testcases.SearchResultsTest">
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.SearchResultsTest@548a24a]" started-at="2022-05-03T19:15:32 IST" name="browsersetup" finished-at="2022-05-03T19:15:54 IST" duration-ms="22538" status="PASS">
+        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.SearchResultsTest@38145825]" started-at="2022-05-13T16:22:12 IST" name="browsersetup" finished-at="2022-05-13T16:22:34 IST" duration-ms="22457" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=SearchResultsTest.verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@548a24a] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=SearchResultsTest.verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@38145825] output={null}]]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browsersetup -->
-        <test-method signature="verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@548a24a]" started-at="2022-05-03T19:15:54 IST" name="verifySearchProduct" finished-at="2022-05-03T19:16:02 IST" duration-ms="7942" status="PASS">
+        <test-method signature="verifySearchProduct()[pri:0, instance:com.testcases.SearchResultsTest@38145825]" started-at="2022-05-13T16:22:34 IST" name="verifySearchProduct" finished-at="2022-05-13T16:22:44 IST" duration-ms="10129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.SearchResultsTest@548a24a]" started-at="2022-05-03T19:16:03 IST" name="tearDown" finished-at="2022-05-03T19:16:04 IST" duration-ms="1579" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.SearchResultsTest@38145825]" started-at="2022-05-13T16:22:46 IST" name="tearDown" finished-at="2022-05-13T16:22:47 IST" duration-ms="1093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testcases.SearchResultsTest -->
       <class name="com.testcases.Indexpagetest">
-        <test-method is-config="true" signature="loadConfig(org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:23 IST" name="loadConfig" finished-at="2022-05-03T19:14:24 IST" duration-ms="825" status="PASS">
+        <test-method is-config="true" signature="loadConfig(org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:19:54 IST" name="loadConfig" finished-at="2022-05-13T16:19:54 IST" duration-ms="507" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:24 IST" name="browsersetup" finished-at="2022-05-03T19:14:45 IST" duration-ms="20271" status="PASS">
+        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:19:54 IST" name="browsersetup" finished-at="2022-05-13T16:20:51 IST" duration-ms="57207" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Indexpagetest.verifylogo()[pri:0, instance:com.testcases.Indexpagetest@19932c16] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=Indexpagetest.verifylogo()[pri:0, instance:com.testcases.Indexpagetest@66ea810] output={null}]]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browsersetup -->
-        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:24 IST" name="browsersetup" finished-at="2022-05-03T19:14:44 IST" duration-ms="19782" status="PASS">
+        <test-method is-config="true" signature="browsersetup(java.lang.String,org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:19:54 IST" name="browsersetup" finished-at="2022-05-13T16:20:51 IST" duration-ms="57242" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=Indexpagetest.verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@19932c16] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=Indexpagetest.verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@66ea810] output={null}]]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@5767b2af]]>
+                <![CDATA[org.testng.TestRunner@4b6ac111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browsersetup -->
-        <test-method signature="verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:44 IST" name="verifyTitle" finished-at="2022-05-03T19:14:44 IST" duration-ms="246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method signature="verifylogo()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:45 IST" name="verifylogo" finished-at="2022-05-03T19:14:45 IST" duration-ms="251" status="PASS">
+        <test-method signature="verifylogo()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:20:51 IST" name="verifylogo" finished-at="2022-05-13T16:20:55 IST" duration-ms="3240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifylogo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:45 IST" name="tearDown" finished-at="2022-05-03T19:14:47 IST" duration-ms="1423" status="PASS">
+        <test-method signature="verifyTitle()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:20:51 IST" name="verifyTitle" finished-at="2022-05-13T16:20:53 IST" duration-ms="1855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:20:55 IST" name="tearDown" finished-at="2022-05-13T16:20:58 IST" duration-ms="3449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:14:46 IST" name="tearDown" finished-at="2022-05-03T19:14:47 IST" duration-ms="718" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:20:55 IST" name="tearDown" finished-at="2022-05-13T16:20:59 IST" duration-ms="3410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="generateReports()[pri:0, instance:com.testcases.Indexpagetest@19932c16]" started-at="2022-05-03T19:16:13 IST" name="generateReports" finished-at="2022-05-03T19:16:19 IST" duration-ms="5435" status="PASS">
+        <test-method is-config="true" signature="generateReports()[pri:0, instance:com.testcases.Indexpagetest@66ea810]" started-at="2022-05-13T16:22:47 IST" name="generateReports" finished-at="2022-05-13T16:22:53 IST" duration-ms="6350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReports -->

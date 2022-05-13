@@ -6,7 +6,7 @@
 		<listener class-name="com.utility.ITestListnerclass"></listener>
 	</listeners>
 	<test name="Test">
-<parameter name="browserrname" value="Chrome"></parameter>
+<parameter name="browserrname" value="chrome"></parameter>
 		<groups>
 			<run>
 				<include name="Smoke"></include>

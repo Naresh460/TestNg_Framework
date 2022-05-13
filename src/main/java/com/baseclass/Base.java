@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,6 +20,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITest;
 import org.testng.ITestContext;
@@ -47,58 +50,62 @@ public class Base {
 	Date date_report = new Date();
 	String filename_report;
 	static String subFolder;
-	
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
-	 
+	public static DesiredCapabilities ds = new DesiredCapabilities();
 
 	public static WebDriver getDriver() {
 		// Get Driver from threadLocalmap
 		return driver.get();
 	}
-	
-	
+
+
 
 	@Parameters("browserrname")
 	@BeforeMethod (groups = {"Regression","Sanity","Smoke"})
-	public void browsersetup(String browserrname, ITestResult result, ITestContext context) {
+	public void browsersetup(String browserrname, ITestResult result, ITestContext context) throws MalformedURLException {		
+		
 		switch (browserrname) {
-		case "Chrome":
-			WebDriverManager.chromedriver().setup();
-			driver.set(new ChromeDriver());
-				
+		case "chrome":	
+			
+			ds.setBrowserName(browserrname);
+			driver.set(new RemoteWebDriver(new URL("http://192.168.1.5:4444"),ds )); //for Grid
+			
+			//WebDriverManager.chromedriver().setup();
+			//driver.set(new ChromeDriver());                                        // for Local
+
 			break;
 		case "FireFox":
 			WebDriverManager.firefoxdriver().setup();
 			driver.set(new FirefoxDriver());
 			break; 
 		}
-	
+
 		getDriver().get( prop.getProperty("url"));		
 	}
-	
-	
+
+
 
 	@AfterMethod(groups = {"Regression","Sanity","Smoke"})
 	public void tearDown() {
 		getDriver().quit();
-		
+
 	}
-	
-	
+
+
 
 	@BeforeSuite(groups = {"Regression","Sanity","Smoke"})
 	public void loadConfig(ITestContext context) throws IOException {
 		DOMConfigurator.configure("log4j.xml");
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream("C:\\Users\\nbusireddy\\Selenium\\git1\\FrameWork\\configuration\\prop.properties");
+		FileInputStream ip = new FileInputStream("C:\\Users\\Naresh\\git\\TestNg_Framework\\configuration\\prop.properties");
 		prop.load(ip);
-         String docTitile=context.getCurrentXmlTest().getName();
+		String docTitile=context.getCurrentXmlTest().getName();
 		filename_report = context.getSuite().getName();
 		reprtengine = new ExtentReports();			
 		sparkreport_all = new ExtentSparkReporter(System.getProperty("user.dir")+"\\ExtentReports\\"+filename_report+"-"+dateFormat_report.format(date_report)+".html");
 		sparkreport_all.config().setDocumentTitle(docTitile);
 		sparkreport_all.config().setReportName("Naresh");
-		sparkreport_all.loadXMLConfig("C:\\Users\\nbusireddy\\Selenium\\git1\\FrameWork\\extentReport-config.xml");
+		sparkreport_all.loadXMLConfig("C:\\Users\\Naresh\\git\\TestNg_Framework\\extentReport-config.xml");
 		reprtengine.attachReporter(sparkreport_all);	  
 		reprtengine.setSystemInfo("OS", System.getProperty("os.name"));
 
@@ -110,14 +117,14 @@ public class Base {
 		Desktop.getDesktop().browse(new File(System.getProperty("user.dir")+"\\ExtentReports\\"+filename_report+"-"+dateFormat_report.format(date_report)+".html").toURI());
 	}
 
-		
+
 
 	public String screenShot(String filename) throws IOException {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		File destination = new File(System.getProperty("user.dir")+"\\Screenshots\\" + filename + "_" + dateName + ".png");	
-		
+
 		try {
 			FileUtils.copyFile(source, destination);
 		} catch (Exception e) {
@@ -125,7 +132,7 @@ public class Base {
 		}
 		// This new path for jenkins
 		//String newImageString = "http://localhost:8080/job/GitFrameWork/ws/FrameWork/Screenshots/"+ filename +"_"+dateName +".png";
-	   // return newImageString;
-	return destination.getAbsolutePath();
-	
-}}
+		// return newImageString;
+		return destination.getAbsolutePath();
+
+	}}
