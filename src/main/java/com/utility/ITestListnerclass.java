@@ -40,10 +40,15 @@ public class ITestListnerclass extends Base implements ITestListener{
 		
 		//extenttest.get().addScreenCaptureFromPath((path));
 		extenttest.get().fail(result.getMethod().getMethodName()+"-->"+"Method is Failed",MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-			
+		extenttest.get().fail(result.getThrowable());
 		
 	}
-
+	@Override
+	public  void onTestSkipped(ITestResult result) { 
+		extenttest.get().skip(result.getThrowable());
+		
+		
+	}
 	@Override
 	public  void onTestSuccess(ITestResult result) {     //screenshot for pass test
 		String path=null;
@@ -56,7 +61,7 @@ public class ITestListnerclass extends Base implements ITestListener{
 		
 		//extenttest.get().addScreenCaptureFromPath((path));
 		extenttest.get().pass(result.getMethod().getMethodName()+"-->"+"Methid is Passed",MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-			
+	
 		
 
 	

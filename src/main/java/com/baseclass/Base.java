@@ -67,11 +67,11 @@ public class Base {
 		switch (browserrname) {
 		case "chrome":	
 			
-			ds.setBrowserName(browserrname);
-			driver.set(new RemoteWebDriver(new URL("http://192.168.1.5:4444"),ds )); //for Grid
+//			ds.setBrowserName(browserrname);
+//			driver.set(new RemoteWebDriver(new URL("http://192.168.1.5:4444"),ds )); //for Grid
 			
-			//WebDriverManager.chromedriver().setup();
-			//driver.set(new ChromeDriver());                                        // for Local
+			WebDriverManager.chromedriver().setup();
+			driver.set(new ChromeDriver());                                        // for Local
 
 			break;
 		case "FireFox":
@@ -97,7 +97,7 @@ public class Base {
 	public void loadConfig(ITestContext context) throws IOException {
 		DOMConfigurator.configure("log4j.xml");
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream("C:\\Users\\Naresh\\git\\TestNg_Framework\\configuration\\prop.properties");
+		FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\configuration\\prop.properties");
 		prop.load(ip);
 		String docTitile=context.getCurrentXmlTest().getName();
 		filename_report = context.getSuite().getName();
@@ -105,7 +105,7 @@ public class Base {
 		sparkreport_all = new ExtentSparkReporter(System.getProperty("user.dir")+"\\ExtentReports\\"+filename_report+"-"+dateFormat_report.format(date_report)+".html");
 		sparkreport_all.config().setDocumentTitle(docTitile);
 		sparkreport_all.config().setReportName("Naresh");
-		sparkreport_all.loadXMLConfig("C:\\Users\\Naresh\\git\\TestNg_Framework\\extentReport-config.xml");
+		sparkreport_all.loadXMLConfig(System.getProperty("user.dir")+"\\extentReport-config.xml");
 		reprtengine.attachReporter(sparkreport_all);	  
 		reprtengine.setSystemInfo("OS", System.getProperty("os.name"));
 

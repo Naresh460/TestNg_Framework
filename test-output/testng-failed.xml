@@ -16,7 +16,7 @@
         <methods>
           <include name="browsersetup"/>
           <include name="loadConfig"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="generateReports"/>
         </methods>

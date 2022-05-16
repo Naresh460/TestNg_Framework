@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelLibrary {
 
-	public static String path = "C:\\Users\\nbusireddy\\Selenium\\TestNG-Repo\\TestData.xlsx";
+	public static String path = "C:\\Users\\nbusireddy\\git\\TestNg_Framework\\TestData\\TestData.xlsx";
 
 	//	public  String path;
 	public FileInputStream fis = null;
