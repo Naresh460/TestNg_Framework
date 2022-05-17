@@ -4,6 +4,7 @@
 	
 	<listeners>
 		<listener class-name="com.utility.ITestListnerclass"></listener>
+		<listener class-name="com.utility.MyTransformerListener"></listener>
 	</listeners>
 	<test name="Test">
 <parameter name="browserrname" value="chrome"></parameter>

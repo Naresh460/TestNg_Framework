@@ -135,4 +135,6 @@ public class Base {
 		// return newImageString;
 		return destination.getAbsolutePath();
 
-	}}
+	}
+	
+	}

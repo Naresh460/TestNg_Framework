@@ -3,6 +3,7 @@
 <suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.utility.ITestListnerclass"/>
+    <listener class-name="com.utility.MyTransformerListener"/>
   </listeners>
   <test thread-count="2" parallel="methods" name="Test(failed)">
     <parameter name="browserrname" value="chrome"/>
