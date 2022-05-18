@@ -108,6 +108,8 @@ public class Base {
 		sparkreport_all.loadXMLConfig(System.getProperty("user.dir")+"\\extentReport-config.xml");
 		reprtengine.attachReporter(sparkreport_all);	  
 		reprtengine.setSystemInfo("OS", System.getProperty("os.name"));
+		FileUtils.cleanDirectory(new File(System.getProperty("user.dir")+"\\ExtentReports\\")); 
+
 
 	}
 

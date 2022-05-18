@@ -49,8 +49,7 @@ public class LoginPageTest extends Base{
 	homepage=loginpage.login(usname,poswd);
 	Log.info("entered username and password and clicked on signin btn");
 	boolean result = homepage.verifyAccount();
-	Assert.assertTrue(result);
-	Assert.assertEquals(false, true);
+	Assert.assertTrue(result);	
 	Log.info("login is success");
 	}
 
